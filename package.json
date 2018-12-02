@@ -1,7 +1,7 @@
 {
   "name": "vue-audio-recorder-gggso",
   "description": "Audio recorder for Vue.js. It allows to create, play, download and store records on a server，使用 @grishkovelli 组件根据自己需求修改",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "author": "gggso <me@gggso.com>",
   "license": "MIT",
   "scripts": {
