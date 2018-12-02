@@ -260,7 +260,6 @@
         recordList      : [],
         selected        : {},
         uploadStatus    : null,
-        uploaderOptions : {}
       }
     },
     components: {
@@ -268,19 +267,12 @@
       IconButton
     },
     created () {
-      this.uploaderOptions = {
-        failedUpload     : this.failedUpload,
-        headers          : this.headers,
-        startUpload      : this.startUpload,
-        successfulUpload : this.successfulUpload,
-        uploadUrl        : this.uploadUrl
-      }
 
       this.$eventBus.$on('start-upload', () => {
         this.isUploading = true
       })
 
-      this.$eventBus.$on('end-upload', (resp) => {
+      this.$eventBus.$on('end-upload', () => {
         this.isUploading = false
         this.uploadStatus = status
         setTimeout(() => {this.uploadStatus = null}, 1500)
@@ -321,6 +313,16 @@
       }
     },
     computed: {
+      uploaderOptions () {
+        console.log('recorder')
+        return {
+        failedUpload     : this.failedUpload,
+        headers          : this.headers,
+        startUpload      : this.startUpload,
+        successfulUpload : this.successfulUpload,
+        uploadUrl        : this.uploadUrl
+      }
+      },
       attemptsLeft () {
         return this.attempts - this.recorder.records.length
       },

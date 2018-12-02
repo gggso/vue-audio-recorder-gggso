@@ -1,8 +1,8 @@
 {
-  "name": "vue-audio-recorder",
-  "description": "Audio recorder for Vue.js. It allows to create, play, download and store records on a server",
+  "name": "vue-audio-recorder-gggso",
+  "description": "Audio recorder for Vue.js. It allows to create, play, download and store records on a server，使用 @grishkovelli 组件根据自己需求修改",
   "version": "2.2.0",
-  "author": "Gennady Grishkovtsov <grishkovelli@gmail.com>",
+  "author": "gggso <me@gggso.com>",
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --env.NODE_ENV=development --mode development --open --hot --https",
@@ -38,7 +38,7 @@
   "main": "dist/vue-audio-recorder.min.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/grishkovelli/vue-audio-recorder.git"
+    "url": "git+https://github.com/gggso/vue-audio-recorder-gggso.git"
   },
   "keywords": [
     "vue",
@@ -47,7 +47,7 @@
     "microphone"
   ],
   "bugs": {
-    "url": "https://github.com/grishkovelli/vue-audio-recorder/issues"
+    "url": "https://github.com/gggso/vue-audio-recorder-gggso/issues"
   },
-  "homepage": "https://github.com/grishkovelli/vue-audio-recorder#readme"
+  "homepage": "https://github.com/gggso/vue-audio-recorder-gggso#readme"
 }
