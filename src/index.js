@@ -1,10 +1,11 @@
 import AudioPlayer   from '@/components/player.vue'
 import AudioRecorder from '@/components/recorder.vue'
+import MiniPlayer from '@/components/miniplayer.vue'
 
 const components = {
   AudioPlayer,
   AudioRecorder,
-
+  MiniPlayer,
   install (Vue) {
     if (this.installed) {
       return
@@ -14,11 +15,13 @@ const components = {
 
     Vue.prototype.$eventBus = Vue.prototype.$eventBus || new Vue
 
+    Vue.component('mini-player', MiniPlayer)
     Vue.component('audio-player', AudioPlayer)
     Vue.component('audio-recorder', AudioRecorder)
+
   }
 }
 
 export default components
 
-export { AudioPlayer, AudioRecorder }
+export { AudioPlayer, AudioRecorder, MiniPlayer }

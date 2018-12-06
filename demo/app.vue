@@ -1,8 +1,11 @@
 <style lang="scss">
+  body{background: #eee}
   .toggle {
     cursor: pointer;
     margin: 20px;
   }
+  .bubble_default{background:#fff;width: 280px;}
+  .bubble_primary{background:#b2e281;width:280px;}
 </style>
 
 <template>
@@ -21,6 +24,16 @@
       :failed-upload="callback"/>
 
     <audio-player :src="mp3" v-if="!showRecorder"/>
+    <br>
+    <br>
+    <div class="bubble_default">
+      <mini-player :src="mp3"/>
+    </div>
+    <br>
+    <div class="bubble_primary">
+      <mini-player :src="mp3"/>
+    </div>
+
   </div>
 </template>
 
@@ -29,7 +42,7 @@
     name: 'app',
     data () {
       return {
-        mp3: '/demo/example.mp3',
+        mp3: 'http:\/\/cloudtest.ksapi.com\/api\/log\/file?filekey=655ba89dc91148b46eec2802d801dd7e&plus=mp3',
         showRecorder: true,
         headers: {
           'X-Custom-Header': 'some data'

@@ -30,7 +30,7 @@
         }
 
         let data = new FormData()
-        data.append('audio', this.record.blob, 'my-record')
+        data.append('file', this.record.blob, 'my-record')
 
         let headers = Object.assign(this.options.headers, {})
         headers['Content-Type'] = `multipart/form-data; boundary=${data._boundary}`
